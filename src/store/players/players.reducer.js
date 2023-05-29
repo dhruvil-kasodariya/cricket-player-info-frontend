@@ -19,6 +19,9 @@ export const playersReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         playersData: payload,
+        playerInfo: {},
+        playerBattingState: {},
+        playerBowlingState: {},
       };
     case PLAYERS_ACTION_TYPE.FATCH_PLAYER_DATA_SUCCESS:
       return {
@@ -49,6 +52,11 @@ export const playersReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         playerFilterOption: payload,
+      };
+    case PLAYERS_ACTION_TYPE.SET_PLAYERS_DATA_NULL:
+      return {
+        ...state,
+        playersData: [],
       };
     case PLAYERS_ACTION_TYPE.FATCH_PLAYERS_DATA_FAILED:
     case PLAYERS_ACTION_TYPE.FATCH_PLAYER_DATA_FAILED:

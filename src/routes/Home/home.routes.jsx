@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectTeamsData } from "../../store/teams/teams.selector";
 import { teamNameFetchApi } from "../../api/teamNames.api";
 import TeamsPreview from "../../componet/TeamsPreview/teams-preview.componet.jsx";
-import Loader from "../../componet/Loader/loader.componet"
+import Loader from "../../componet/Loader/loader.componet";
 import Footer from "../../componet/Footer/footer.componet";
 import NavBar from "../../componet/navBar/navBar.componet";
 
@@ -18,8 +18,8 @@ const Home = () => {
   return (
     <Fragment>
       <NavBar />
-      {teamsData.length? <TeamsPreview teamsData={teamsData} />:<Loader />}
-     
+      {!teamsData.length ? <Loader /> : <TeamsPreview teamsData={teamsData} />}
+
       <Footer />
     </Fragment>
   );

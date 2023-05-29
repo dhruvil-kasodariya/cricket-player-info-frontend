@@ -51,3 +51,6 @@ export const setplayerSearchString = (searchString) =>
 
 export const setPlayerFilterOption = (option) =>
   createAction(PLAYERS_ACTION_TYPE.SET_PLAYER_FILTER_OPTION, option);
+
+export const setPlayersDataNull = () =>
+  createAction(PLAYERS_ACTION_TYPE.SET_PLAYERS_DATA_NULL);
