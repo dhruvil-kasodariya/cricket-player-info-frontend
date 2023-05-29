@@ -25,7 +25,7 @@ const PlayerList = () => {
 
   useEffect(() => {
     getTeamPlayersApi(team.teamId, dispatch);
-  }, []);
+  }, [dispatch, team]);
 
   useEffect(() => {
     if (data.length) {

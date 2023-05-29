@@ -13,7 +13,6 @@ import {
   getPlayerInfoApi,
 } from "../../api/playerInfo.api";
 import Loader from "../Loader/loader.componet";
-import NavBar from "../navBar/navBar.componet";
 
 const PlayerInfo = () => {
   const player = useSelector(selectPlayerData);
@@ -29,7 +28,7 @@ const PlayerInfo = () => {
       await getPlayerBowlingStateApi(id, dispatch);
     };
     apiFetch();
-  }, []);
+  }, [dispatch, player]);
 
   return (
     <div>
