@@ -16,7 +16,7 @@ export const getPlayerInfoApi = async (id, dispatch) => {
     method: "GET",
     url: `https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/${id}`,
     headers: {
-      "X-RapidAPI-Key": key2,
+      "X-RapidAPI-Key": key3,
       "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
     },
   };
@@ -37,7 +37,7 @@ export const getPlayerBattingStateApi = async (id, dispatch) => {
     method: "GET",
     url: `https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/${id}/batting`,
     headers: {
-      "X-RapidAPI-Key": key2,
+      "X-RapidAPI-Key": key3,
       "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
     },
   };
@@ -59,7 +59,7 @@ export const getPlayerBowlingStateApi = async (id, dispatch) => {
     method: "GET",
     url: `https://cricbuzz-cricket.p.rapidapi.com/stats/v1/player/${id}/bowling`,
     headers: {
-      "X-RapidAPI-Key": key2,
+      "X-RapidAPI-Key": key3,
       "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com",
     },
   };

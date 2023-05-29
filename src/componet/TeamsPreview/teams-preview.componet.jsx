@@ -5,6 +5,7 @@ import { setPlayersDataNull } from "../../store/players/players.action";
 
 import { TeamsPreviewContainer, TeamsPreviewCard } from "./teams-preview.style";
 import { Fragment, useEffect } from "react";
+import TeamCardView from "../CardView/team-card-view.componet";
 const TeamsPreview = ({ teamsData }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -17,15 +18,13 @@ const TeamsPreview = ({ teamsData }) => {
     dispatch(setPlayersDataNull());
   }, [dispatch]);
   return (
-    <TeamsPreviewContainer>
+    <TeamsPreviewContainer
+      style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}
+    >
       {teamsData.map((team, index) => (
-        <Fragment>
-          <TeamsPreviewCard
-            key={team._id}
-            imgUrl={team.imageUrl}
-            onClick={() => handleClick(team)}
-          />
-        </Fragment>
+        <div key={index} onClick={() => handleClick(team)}>
+          <TeamCardView team={team} />
+        </div>
       ))}
     </TeamsPreviewContainer>
   );
@@ -33,6 +32,10 @@ const TeamsPreview = ({ teamsData }) => {
 
 export default TeamsPreview;
 
-//    <div key={index} onClick={() => handleClick(team)}>
-// <TeamCardView team={team}/>
-//     </div>
+// <Fragment>
+//     <TeamsPreviewCard
+//       key={team._id}
+//       imgUrl={team.imageUrl}
+//       onClick={() => handleClick(team)}
+//     />
+//   </Fragment>
