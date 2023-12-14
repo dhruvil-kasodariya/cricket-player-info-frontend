@@ -18,7 +18,7 @@ const Footer = () => {
           <li className="social-icon__item">
             <a
               className="social-icon__link"
-              href="https://github.com/iambunty45"
+              href="https://github.com/dhruvil-kasodariya"
             >
               <FiGithub />
             </a>
